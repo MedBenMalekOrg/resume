@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/links";
+import Resume from "./components/resume";
+import Error404 from "./components/error/error404";
+import Preloader from "./components/common/preloader";
+import Porfolio from "./components/portfolio";
+import Blog from "./components/blog";
+import Post from "./components/blog/post";
+import Contact from "./components/contact";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <React.Fragment>
+          <Header />
+          <Switch>
+            <Route exact path="/p" component={Preloader} />
+            <Route exact path="/" component={Resume} />
+            <Route exact path="/portfolio" component={Porfolio} />
+            <Route path="/blog/:id" exact component={Post} />
+            <Route path="/blog" exact component={Blog} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="*" component={Error404} />
+          </Switch>
+          <Footer />
+        </React.Fragment>
+      </Router>
+    );
+  }
 }
 
 export default App;

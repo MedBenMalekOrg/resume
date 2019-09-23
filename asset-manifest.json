@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.b67c490c.chunk.css",
-    "main.js": "/resume/static/js/main.6022c353.chunk.js",
-    "main.js.map": "/resume/static/js/main.6022c353.chunk.js.map",
-    "runtime~main.js": "/resume/static/js/runtime~main.deee99b2.js",
-    "runtime~main.js.map": "/resume/static/js/runtime~main.deee99b2.js.map",
-    "static/css/2.aa46e993.chunk.css": "/resume/static/css/2.aa46e993.chunk.css",
-    "static/js/2.e261a461.chunk.js": "/resume/static/js/2.e261a461.chunk.js",
-    "static/js/2.e261a461.chunk.js.map": "/resume/static/js/2.e261a461.chunk.js.map",
-    "index.html": "/resume/index.html",
-    "precache-manifest.8692ffd9fe727a7007b7c55f4aa5c48a.js": "/resume/precache-manifest.8692ffd9fe727a7007b7c55f4aa5c48a.js",
-    "service-worker.js": "/resume/service-worker.js",
-    "static/css/2.aa46e993.chunk.css.map": "/resume/static/css/2.aa46e993.chunk.css.map",
-    "static/css/main.b67c490c.chunk.css.map": "/resume/static/css/main.b67c490c.chunk.css.map",
-    "static/media/index.css": "/resume/static/media/ionicons790f.621bd386.svg"
+    "main.css": "/static/css/main.18b5550f.chunk.css",
+    "main.js": "/static/js/main.495eaf2f.chunk.js",
+    "main.js.map": "/static/js/main.495eaf2f.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a45aa8df.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a45aa8df.js.map",
+    "static/css/2.aa46e993.chunk.css": "/static/css/2.aa46e993.chunk.css",
+    "static/js/2.e261a461.chunk.js": "/static/js/2.e261a461.chunk.js",
+    "static/js/2.e261a461.chunk.js.map": "/static/js/2.e261a461.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.83a76bd049b78cf1ab25dba45c20aa94.js": "/precache-manifest.83a76bd049b78cf1ab25dba45c20aa94.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.aa46e993.chunk.css.map": "/static/css/2.aa46e993.chunk.css.map",
+    "static/css/main.18b5550f.chunk.css.map": "/static/css/main.18b5550f.chunk.css.map",
+    "static/media/index.css": "/static/media/ionicons790f.621bd386.svg"
   }
 }

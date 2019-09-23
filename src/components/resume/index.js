@@ -96,7 +96,8 @@ export default class index extends Component {
                     <strong>Age:</strong> 25 Years
                   </li>
                   <li>
-                    <strong>Job:</strong> Web Developer
+                    <strong>Job:</strong> Student engineer in Web and Internet
+                    technologies
                   </li>
                   <li>
                     <strong>Citizenship:</strong> Tunisian
@@ -110,9 +111,14 @@ export default class index extends Component {
                 </ul>
               </div>
               <div className="bts">
-                <Link to="/cv" className="btn fill" data-text="Download CV">
+                <a
+                  href="https://drive.google.com/file/d/1s47iy9KiuF-U285SwJkiHkBd4MNqZaS7/view?usp=sharing"
+                  className="btn fill"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Download CV
-                </Link>
+                </a>
               </div>
             </div>
             <div className="clear" />
@@ -129,55 +135,27 @@ export default class index extends Component {
                 </div>
                 <div className="resume-items">
                   <div className="resume-item active">
-                    <div className="date">2018 - Present</div>
-                    <div className="name">Freelancer</div>
+                    <div className="date">July - August 2019</div>
+                    <div className="name">INTERNSHIP WEB DEVELOPMENT</div>
                     <p>
-                      develop multiple projects as a freelancer with the
-                      React.js / Node (Express.js) and Symfony Frameworks.
+                      Creadevity - Tunis, Tunisia | Development of a platform
+                      for the production and analysis of statistics
                     </p>
                   </div>
                   <div className="resume-item">
-                    <div className="date">2018</div>
-                    <div className="name">
-                      back-end Developer -
-                      <a
-                        href="http://esprit.tn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Youth Can Organization
-                      </a>
-                    </div>
+                    <div className="date">February - May 2016</div>
+                    <div className="name">INTERNSHIP WEB DEVELOPMENT</div>
                     <p>
-                      Establish a platform to evaluate the work of
-                      municipalities after the elections with the symfony 3.4
-                      Framework.
+                      Formalab - Tunis, Manouba | Development of a web platform
+                      for the training center for training management
                     </p>
                   </div>
                   <div className="resume-item">
-                    <div className="date">2016</div>
-                    <div className="name">
-                      back-end Developer -{" "}
-                      <a
-                        href="http://esprit.tn"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Formalab
-                      </a>
-                    </div>
+                    <div className="date">July - August 2015</div>
+                    <div className="name">IT TRAINEE</div>
                     <p>
-                      An internship took place in the FormaLab training center
-                      with the objective of creating a web platform for the
-                      center under the Laravel Framework 5.3.
-                    </p>
-                  </div>
-                  <div className="resume-item">
-                    <div className="date">2015</div>
-                    <div className="name">Senior Developer - ARRU</div>
-                    <p>
-                      Senior Developer at the Urban Rehabilitation and
-                      Renovation Agency, IT Department.
+                      Arru - Tunis, Tunisia | Oracle Development for the Urban
+                      Rehabilitation and Renovation Agency, IT Department
                     </p>
                   </div>
                 </div>
@@ -195,25 +173,23 @@ export default class index extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Private Higher School of Engineering and Technology.{" "}
+                        Computer Engineering | Web Technologies and the Internet
                       </a>
                     </div>
-                    <p>WEB AND INTERNET TECHNOLOGIES ENGINEER. </p>
+                    <p>Private Higher School of Engineering of Tunis ESPRIT </p>
                   </div>
                   <div className="resume-item">
-                    <div className="date">2013 - 2017</div>
+                    <div className="date">2014 - 2017</div>
                     <div className="name">
                       <a
                         href="http://www.isa2m.rnu.tn"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Higher Institute of Multimedia Arts of Manouba
+                        Bachelor's degree in Computer Science
                       </a>
                     </div>
-                    <p>
-                      FUNDAMENTAL LICENSE IN COMPUTER SCIENCE AND MULTIMEDIA.
-                    </p>
+                    <p>Higher Institute of Multimedia Arts ISAMM</p>
                   </div>
                 </div>
               </div>
@@ -221,41 +197,34 @@ export default class index extends Component {
           </div>
         </div>
 
-        {/* Skills */}
-        <div className="section skills">
+        {/* Service */}
+        <div className="section service">
           <div className="content">
             <div className="title">
               <div className="title_inner">My Skills</div>
             </div>
-            <div className="skills">
-              <ul>
-                <li>
-                  <div className="name">
-                    JavaScript - (React.js / Node.js / Express.js)
-                  </div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "90%" }}>
-                      <span className="percent">70%</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">PHP - (Symfony)</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "80%" }}>
-                      <span className="percent">90%</span>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="name">Python - (Dajago)</div>
-                  <div className="progress">
-                    <div className="percentage" style={{ width: "70%" }}>
-                      <span className="percent">75%</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+            <div className="service-items">
+              <div className="service-item">
+                <div className="icon">
+                  <span className="ion ion-code" />
+                </div>
+                <div className="name">Programming languages</div>
+                <p> JavaScript | Python | JAVA | JEE C# SQL | PL/SQL </p>
+              </div>
+              <div className="service-item">
+                <div className="icon">
+                  <span className="ion ion-ios-analytics" />
+                </div>
+                <div className="name">Database</div>
+                <p> Oracle | MySQL | MongoDB </p>
+              </div>
+              <div className="service-item">
+                <div className="icon">
+                  <span className="ion ion-social-chrome" />
+                </div>
+                <div className="name">Web Frameworks</div>
+                <p> Symfony | Laravel | React js | Angular Js | Express Js</p>
+              </div>
             </div>
           </div>
         </div>

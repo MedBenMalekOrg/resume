@@ -24,6 +24,7 @@ class App extends Component {
             <Route path="/blog" exact component={Blog} />
             <Route path="/contact" exact component={Contact} />
             <Route path="*" component={Error404} />
+            <Route path="*" component={Error404} />
           </Switch>
           <Footer />
         </React.Fragment>

@@ -3,7 +3,8 @@ import GlitchEffect from "react-glitch-effect";
 import { Link } from "react-router-dom";
 import animateScroll from "react-scroll";
 import Preloader from "../common/preloader";
-import Modal from "react-modal";
+import Popup from "reactjs-popup";
+import ReactTypingEffect from "react-typing-effect";
 
 export default class index extends Component {
   constructor() {
@@ -11,7 +12,6 @@ export default class index extends Component {
     this.state = {
       show: true,
       popup: false,
-      modalIsOpen: false,
       portfolio: [
         {
           text:
@@ -36,23 +36,34 @@ export default class index extends Component {
         }
       ]
     };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
   }
 
   handleScroll = to => {
     console.log(to);
   };
 
-  openModal() {
-    this.setState({ modalIsOpen: true });
-  }
-
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-  }
-
   render() {
+    const formalab = ["Laravel", "MySQL", "Scrum", "Git"];
+    const iderspace = [
+      "Expressjs",
+      "reactjs",
+      "Dialogfow",
+      "Classification",
+      "Git"
+    ];
+    const doctwin = [
+      "JEE",
+      "maven",
+      "JPA",
+      "JSF",
+      "EJB",
+      ".Net",
+      "Angular",
+      "MongoDB",
+      "Git"
+    ];
+    const youth = ["Symphony", "MySQL"];
+    const esprit = ["JavaFx", "Symphony", "MySQL", "Scrum", "Git"];
     setTimeout(() => {
       this.setState({ show: false });
     }, 100);
@@ -72,7 +83,6 @@ export default class index extends Component {
                       PORTFOLIO
                     </div>
                   </GlitchEffect>
-
                   <p>
                     <Link to="/">Home</Link> /{" "}
                     <Link to="/portfolio">Portfolio</Link>
@@ -102,427 +112,370 @@ export default class index extends Component {
           <div className="section works" id="portfolio">
             <div className="content">
               <div className="title">
-                <div className="title_inner">Recent Works</div>
-              </div>
-              <div className="filter-menu">
-                <div className="filters">
-                  <div className="btn-group">
-                    <label data-text="Nature">
-                      <input type="checkbox" defaultValue="f-graphic" />
-                      Graphics
-                    </label>
-                    <label data-text="Illustration">
-                      <input type="checkbox" defaultValue="f-illustration" />
-                      Illustration
-                    </label>
-                    <label data-text="Photography">
-                      <input type="checkbox" defaultValue="f-photo" />
-                      Photography
-                    </label>
-                    <label data-text="Mockups">
-                      <input type="checkbox" defaultValue="f-mockups" />
-                      Mockups
-                    </label>
-                  </div>
-                </div>
+                <div className="title_inner">Projects</div>
               </div>
               <div className="box-items">
-                <div className="box-item f-mockups" onClick={this.openModal}>
-                  <div className="image">
-                    <Link to="#popup-1" className="has-popup">
-                      <img src="images/works/work1.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Mockups</div>
-                    <Link to="#popup-1" className="name has-popup">
-                      Canvas Tote Bag MockUp
-                    </Link>
-                  </div>
-                </div>
-                <div
-                  className=""
-                  tabIndex={-1}
-                  style={{ overflow: "hidden auto" }}
-                >
-                  <Modal
-                    isOpen={this.state.modalIsOpen}
-                    shouldCloseOnEsc={true}
-                    shouldReturnFocusAfterClose={true}
-                    onRequestClose={this.closeModal}
-                    contentLabel="Example Modal"
-                    className="popup-box mfp-fade"
-                    overlayClassName="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-fade mfp-ready"
-                  >
-                    <div className="mfp-bg mfp-fade mfp-ready" />
-                    <div className="mfp-container mfp-s-ready mfp-inline-holder">
-                      <div className="mfp-content">
-                        <div id="popup-1" className="popup-box mfp-fade">
-                          <div className="content">
-                            <div className="image">
-                              <img src="images/works/work1.jpg" alt="img" />
-                            </div>
-                            <div className="desc">
-                              <div className="category">category</div>
-                              <h4>sdfsdfsdf</h4>
-                              <p>text</p>
-                              <Link
-                                to="#"
-                                className="btn"
-                                data-text="View Project"
-                              >
-                                View Project
-                              </Link>
-                            </div>
-                          </div>
-                          <button
-                            title="Close (Esc)"
-                            type="button"
-                            className="mfp-close"
-                            onClick={this.closeModal}
-                          >
-                            ×
-                          </button>
+                <div class="box-item">
+                  <Popup
+                    contentStyle={{ width: "600px" }}
+                    trigger={
+                      <div>
+                        <div class="image">
+                          <a href="#formalab" class="has-popup">
+                            <img src="images/formalab.png" alt="" />
+                            <span class="info">
+                              <span class="centrize full-width">
+                                <span class="vertical-center">
+                                  <span class="ion ion-ios-plus-empty"></span>
+                                </span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="desc">
+                          <div class="category">Training Center | FormaLab</div>
                         </div>
                       </div>
-                      <div className="mfp-preloader">Loading...</div>
+                    }
+                    modal
+                    closeOnDocumentClick
+                  >
+                    <div>
+                      <div className="popup-box mfp-fade">
+                        <div className="content">
+                          <div className="image">
+                            <img src="images/formalab.png" alt="img" />
+                          </div>
+                          <div className="desc">
+                            <div className="category"></div>
+                            <h4>Formalab</h4>
+                            <p
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                            >
+                              Technologies:{" "}
+                            </p>
+
+                            <ReactTypingEffect
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                              speed={50}
+                              typingDelay={800}
+                              eraseDelay={800}
+                              text={formalab}
+                            />
+                            <p>
+                              Development of a new comfortable platform that
+                              facilitates training management for trainers.
+                            </p>
+                            <a
+                              href="https://github.com/MedBenMalek/Formalab"
+                              className="btn"
+                              data-text="View Project"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View Project
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </Modal>
+                  </Popup>
                 </div>
-                <div className="box-item f-photo">
-                  <div className="image">
-                    <Link to="#popup-2" className="has-popup">
-                      <img src="images/works/work2.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Photography</div>
-                    <Link to="#popup-2" className="name has-popup">
-                      Coffee Cup In Hand
-                    </Link>
-                  </div>
-                  <div id="popup-2" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work2.jpg" alt="img" />
+                <div class="box-item">
+                  <Popup
+                    contentStyle={{ width: "600px" }}
+                    trigger={
+                      <div>
+                        <div class="image">
+                          <a href="#IderSpace" class="has-popup">
+                            <img src="images/IderSpace.jpg" alt="" />
+                            <span class="info">
+                              <span class="centrize full-width">
+                                <span class="vertical-center">
+                                  <span class="ion ion-ios-plus-empty"></span>
+                                </span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="desc">
+                          <div class="category">IderSpace</div>
+                        </div>
                       </div>
-                      <div className="desc">
-                        <div className="category">Photography</div>
-                        <h4>Coffee Cup In Hand</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
+                    }
+                    modal
+                    closeOnDocumentClick
+                  >
+                    <div>
+                      <div className="popup-box mfp-fade">
+                        <div className="content">
+                          <div className="image">
+                            <img src="images/IderSpace.jpg" alt="img" />
+                          </div>
+                          <div className="desc">
+                            <div className="category"></div>
+                            <h4>IderSpace</h4>
+                            <p
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                            >
+                              Technologies:{" "}
+                            </p>
+
+                            <ReactTypingEffect
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                              speed={50}
+                              typingDelay={800}
+                              eraseDelay={800}
+                              text={iderspace}
+                            />
+                            <p>
+                              The goal is to set up a collaborative help
+                              solution in the form of a social network. The
+                              network will facilitate the collaboration process
+                              by generating grouping recommendations based on
+                              the task being performed, the history of listed
+                              activities, available skills.
+                            </p>
+                            <a
+                              href="https://github.com/achrefsaadouni/IderSpace"
+                              className="btn"
+                              data-text="View Project"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View Project
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Popup>
                 </div>
-                <div className="box-item f-illustration">
-                  <div className="image">
-                    <Link to="#popup-3" className="has-popup">
-                      <img src="images/works/work8.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Illustration</div>
-                    <Link to="#popup-3" className="name has-popup">
-                      Love &amp; Care Ceramic Bottles
-                    </Link>
-                  </div>
-                  <div id="popup-3" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work8.jpg" alt="img" />
+                <div class="box-item">
+                  <Popup
+                    contentStyle={{ width: "600px" }}
+                    trigger={
+                      <div>
+                        <div class="image">
+                          <a href="#DocTwin" class="has-popup">
+                            <img src="images/doctwin.jpg" alt="" />
+                            <span class="info">
+                              <span class="centrize full-width">
+                                <span class="vertical-center">
+                                  <span class="ion ion-ios-plus-empty"></span>
+                                </span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="desc">
+                          <div class="category">DocTwin</div>
+                        </div>
                       </div>
-                      <div className="desc">
-                        <div className="category">Illustration</div>
-                        <h4>Love &amp; Care Ceramic Bottles</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
+                    }
+                    modal
+                    closeOnDocumentClick
+                  >
+                    <div>
+                      <div className="popup-box mfp-fade">
+                        <div className="content">
+                          <div className="image">
+                            <img src="images/doctwin.jpg" alt="img" />
+                          </div>
+                          <div className="desc">
+                            <div className="category"></div>
+                            <h4>DocTwin</h4>
+                            <p
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                            >
+                              Technologies:{" "}
+                            </p>
+
+                            <ReactTypingEffect
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                              speed={50}
+                              typingDelay={800}
+                              eraseDelay={800}
+                              text={doctwin}
+                            />
+                            <p>
+                              Development of a multiplatform application for
+                              making medical appointments with an intelligent
+                              adjustment of appointments in case of withdrawal
+                              of the patient.
+                            </p>
+                            <a
+                              href="https://github.com/MedBenMalek/EpioneAngular"
+                              className="btn"
+                              data-text="View Project"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              View Project
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Popup>
                 </div>
-                <div className="box-item f-photo">
-                  <div className="image">
-                    <Link to="#popup-4" className="has-popup">
-                      <img src="images/works/work4.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Photography</div>
-                    <Link to="#popup-4" className="name has-popup">
-                      Shopping gift bag
-                    </Link>
-                  </div>
-                  <div id="popup-4" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work4.jpg" alt="img" />
+                <div class="box-item">
+                  <Popup
+                    contentStyle={{ width: "600px" }}
+                    trigger={
+                      <div>
+                        <div class="image">
+                          <a href="#formalab" class="has-popup">
+                            <img src="images/youth.jpg" alt="" />
+                            <span class="info">
+                              <span class="centrize full-width">
+                                <span class="vertical-center">
+                                  <span class="ion ion-ios-plus-empty"></span>
+                                </span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="desc">
+                          <div class="category">Youth Township</div>
+                        </div>
                       </div>
-                      <div className="desc">
-                        <div className="category">Photography</div>
-                        <h4>Shopping gift bag</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
+                    }
+                    modal
+                    closeOnDocumentClick
+                  >
+                    <div>
+                      <div className="popup-box mfp-fade">
+                        <div className="content">
+                          <div className="image">
+                            <img src="images/youth.jpg" alt="img" />
+                          </div>
+                          <div className="desc">
+                            <div className="category"></div>
+                            <h4>Youth Township</h4>
+                            <p
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                            >
+                              Technologies:{" "}
+                            </p>
+
+                            <ReactTypingEffect
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                              speed={50}
+                              typingDelay={800}
+                              eraseDelay={800}
+                              text={youth}
+                            />
+                            <p>
+                              Platform to evaluate the work of municipalities
+                              after the elections.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Popup>
                 </div>
-                <div className="box-item f-mockups">
-                  <div className="image">
-                    <Link to="#popup-5" className="has-popup">
-                      <img src="images/works/work5.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Mockups</div>
-                    <Link to="#popup-5" className="name has-popup">
-                      Amore Mio Three Cups
-                    </Link>
-                  </div>
-                  <div id="popup-5" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work5.jpg" alt="img" />
+                <div class="box-item">
+                  <Popup
+                    contentStyle={{ width: "600px" }}
+                    trigger={
+                      <div>
+                        <div class="image">
+                          <a href="#formalab" class="has-popup">
+                            <img
+                              src="images/esprit.jpg"
+                              alt="esprit entre'aid"
+                            />
+                            <span class="info">
+                              <span class="centrize full-width">
+                                <span class="vertical-center">
+                                  <span class="ion ion-ios-plus-empty"></span>
+                                </span>
+                              </span>
+                            </span>
+                          </a>
+                        </div>
+                        <div class="desc">
+                          <div class="category">Esprit entre'aid</div>
+                        </div>
                       </div>
-                      <div className="desc">
-                        <div className="category">Mockups</div>
-                        <h4>Amore Mio Three Cups</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="box-item f-illustration">
-                  <div className="image">
-                    <Link to="#popup-6" className="has-popup">
-                      <img src="images/works/work6.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Illustration</div>
-                    <Link to="#popup-6" className="name has-popup">
-                      Marta Veludo Beautiful Poster
-                    </Link>
-                  </div>
-                  <div id="popup-6" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work6.jpg" alt="img" />
-                      </div>
-                      <div className="desc">
-                        <div className="category">Illustration</div>
-                        <h4>Marta Veludo Beautiful Poster</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
+                    }
+                    modal
+                    closeOnDocumentClick
+                  >
+                    <div>
+                      <div className="popup-box mfp-fade">
+                        <div className="content">
+                          <div className="image">
+                            <img src="images/esprit.jpg" alt="img" />
+                          </div>
+                          <div className="desc">
+                            <div className="category"></div>
+                            <h4>Esprit entre'aid</h4>
+                            <p
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                            >
+                              Technologies:{" "}
+                            </p>
+
+                            <ReactTypingEffect
+                              style={{
+                                color: "#43656f",
+                                fontSize: "10px",
+                                display: "inline"
+                              }}
+                              speed={50}
+                              typingDelay={800}
+                              eraseDelay={800}
+                              text={esprit}
+                            />
+                            <p>
+                              Development of a multiplatform application that
+                              facilitates communication and strengthens the
+                              relationship between the company and the student.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="box-item f-mockups">
-                  <div className="image">
-                    <Link to="#popup-7" className="has-popup">
-                      <img src="images/works/work7.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Mockups</div>
-                    <Link to="#popup-7" className="name has-popup">
-                      Minimal Poster Frame
-                    </Link>
-                  </div>
-                  <div id="popup-7" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work7.jpg" alt="img" />
-                      </div>
-                      <div className="desc">
-                        <div className="category">Mockups</div>
-                        <h4>Minimal Poster Frame</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="box-item f-graphic">
-                  <div className="image">
-                    <Link to="#popup-8" className="has-popup">
-                      <img src="images/works/work3.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Graphics</div>
-                    <Link to="#popup-8" className="name has-popup">
-                      Cardboard Box
-                    </Link>
-                  </div>
-                  <div id="popup-8" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work3.jpg" alt="img" />
-                      </div>
-                      <div className="desc">
-                        <div className="category">Graphics</div>
-                        <h4>Cardboard Box</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="box-item f-graphic">
-                  <div className="image">
-                    <Link to="#popup-9" className="has-popup">
-                      <img src="images/works/work9.jpg" alt="img" />
-                      <span className="info">
-                        <span className="centrize full-width">
-                          <span className="vertical-center">
-                            <span className="ion ion-ios-plus-empty" />
-                          </span>
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                  <div className="desc">
-                    <div className="category">Graphics</div>
-                    <Link to="#popup-9" className="name has-popup">
-                      Hello World Paper
-                    </Link>
-                  </div>
-                  <div id="popup-9" className="popup-box mfp-fade mfp-hide">
-                    <div className="content">
-                      <div className="image">
-                        <img src="images/works/work9.jpg" alt="img" />
-                      </div>
-                      <div className="desc">
-                        <div className="category">Graphics</div>
-                        <h4>Hello World Paper</h4>
-                        <p>
-                          Consul latine iudicabit eu vel. Cu has animal eruditi
-                          voluptatibus. Eu volumus explicari sed. Mel mutat
-                          vituperata suscipiantur et, et fabellas explicari
-                          adipiscing quo, no mucius euismod vis. Cu vim quem
-                          quod cibo.
-                        </p>
-                        <Link to="#" className="btn" data-text="View Project">
-                          View Project
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                  </Popup>
                 </div>
               </div>
               <div className="clear" />

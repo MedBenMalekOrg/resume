@@ -872,6 +872,7 @@ header .head-top .top-menu ul li.active .btn {
   -webkit-border-radius: 100px;
   -khtml-border-radius: 100px;
 }
+
 @media (max-width: 600px) {
   .section.about .image img {
     width: 80px;
@@ -1397,7 +1398,7 @@ footer .copy {
   }
 }
 .popup-box .image img {
-  width: 100%;
+  width: 250px;
   height: auto;
 }
 .popup-box .desc {
@@ -4846,7 +4847,7 @@ button::-moz-focus-inner {
 .mfp-iframe-holder .mfp-content {
   line-height: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: 5000px;
 }
 .mfp-iframe-holder .mfp-close {
   top: -40px;
@@ -7378,4 +7379,11 @@ img.mfp-img {
 .rollOut {
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
+}
+.contentv2 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
 }

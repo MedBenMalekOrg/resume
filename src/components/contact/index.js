@@ -68,20 +68,23 @@ export default class index extends Component {
               </div>
             </div>
           </div>
+          <animateScroll.Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            hashSpy={true}
+            className="mouse_btn"
+            smooth={true}
+            duration={500}
+            offset={-120}
+            onSetActive={this.handleScroll}
+            ignoreCancelEvents={false}
+            delay={50}
+          >
+            <span className="ion ion-mouse"></span>
+          </animateScroll.Link>
         </div>
-        <animateScroll.Link
-          activeClass="contact"
-          to="blog"
-          spy={true}
-          hashSpy={true}
-          className="mouse_btn"
-          smooth={true}
-          duration={500}
-          offset={-120}
-          onSetActive={this.handleScroll}
-          ignoreCancelEvents={false}
-          delay={50}
-        ></animateScroll.Link>
+
         {/* Contacts Info */}
         <div className="section contacts" id="contact">
           <div className="content">
@@ -94,7 +97,7 @@ export default class index extends Component {
                   <span className="ion ion-android-phone-portrait" />
                 </div>
                 <div className="name">Phone</div>
-                <p>+ (231) 456 67 89</p>
+                <p>+ (216) 98 786 131</p>
               </div>
               <div className="service-item">
                 <div className="icon">
@@ -102,9 +105,9 @@ export default class index extends Component {
                 </div>
                 <div className="name">Email</div>
                 <p>
-                  <Link to="mailto:steve-pearson@gmail.com">
-                    steve-pearson@gmail.com
-                  </Link>
+                  <a href="mailto:steve-pearson@gmail.com">
+                    benmalekchrif@gmail.com
+                  </a>
                 </p>
               </div>
               <div className="service-item">
@@ -112,7 +115,7 @@ export default class index extends Component {
                   <span className="ion ion-ios-location" />
                 </div>
                 <div className="name">Address</div>
-                <p>2621 W Pico Blvd, Los Angeles</p>
+                <p>Tunisia, Tunis</p>
               </div>
             </div>
             <div className="contact_form">

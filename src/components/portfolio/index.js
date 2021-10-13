@@ -18,21 +18,21 @@ export default class index extends Component {
             "Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.",
           category: "MOCKUPS1",
           title: "CANVAS TOTE BAG MOCKUP",
-          img: "images/works/work1.jpg"
+          img: process.env.PUBLIC_URL+"images/works/work1.jpg"
         },
         {
           text:
             "Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.",
           category: "MOCKUPS2",
           title: "CANVAS TOTE BAG MOCKUP",
-          img: "images/works/work1.jpg"
+          img: process.env.PUBLIC_URL+"images/works/work1.jpg"
         },
         {
           text:
             "Consul latine iudicabit eu vel. Cu has animal eruditi voluptatibus. Eu volumus explicari sed. Mel mutat vituperata suscipiantur et, et fabellas explicari adipiscing quo, no mucius euismod vis. Cu vim quem quod cibo.",
           category: "MOCKUPS3",
           title: "CANVAS TOTE BAG MOCKUP",
-          img: "images/works/work1.jpg"
+          img: process.env.PUBLIC_URL+"images/works/work1.jpg"
         }
       ]
     };
@@ -104,7 +104,7 @@ export default class index extends Component {
               ignoreCancelEvents={false}
               delay={50}
             >
-              <span className="ion ion-mouse"></span>
+              <span className="ion ion-mouse"/>
             </animateScroll.Link>
           </div>
 
@@ -115,25 +115,25 @@ export default class index extends Component {
                 <div className="title_inner">Projects</div>
               </div>
               <div className="box-items">
-                <div class="box-item">
+                <div className="box-item">
                   <Popup
                     contentStyle={{ width: "600px" }}
                     trigger={
                       <div>
-                        <div class="image">
-                          <a href="#formalab" class="has-popup">
-                            <img src="images/formalab.png" alt="" />
-                            <span class="info">
-                              <span class="centrize full-width">
-                                <span class="vertical-center">
-                                  <span class="ion ion-ios-plus-empty"></span>
+                        <div className="image">
+                          <a href="#formalab" className="has-popup">
+                            <img src={process.env.PUBLIC_URL+'/images/formalab.png'} alt="Formalab" />
+                            <span className="info">
+                              <span className="centrize full-width">
+                                <span className="vertical-center">
+                                  <span className="ion ion-ios-plus-empty"/>
                                 </span>
                               </span>
                             </span>
                           </a>
                         </div>
-                        <div class="desc">
-                          <div class="category">Training Center | FormaLab</div>
+                        <div className="desc">
+                          <div className="category">Training Center | FormaLab</div>
                         </div>
                       </div>
                     }
@@ -144,10 +144,10 @@ export default class index extends Component {
                       <div className="popup-box mfp-fade">
                         <div className="content">
                           <div className="image">
-                            <img src="images/formalab.png" alt="img" />
+                            <img src={process.env.PUBLIC_URL+'/images/formalab.png'} alt="img" />
                           </div>
                           <div className="desc">
-                            <div className="category"></div>
+                            <div className="category"/>
                             <h4>Formalab</h4>
                             <p
                               style={{
@@ -189,25 +189,25 @@ export default class index extends Component {
                     </div>
                   </Popup>
                 </div>
-                <div class="box-item">
+                <div className="box-item">
                   <Popup
                     contentStyle={{ width: "600px" }}
                     trigger={
                       <div>
-                        <div class="image">
-                          <a href="#IderSpace" class="has-popup">
-                            <img src="images/IderSpace.jpg" alt="" />
-                            <span class="info">
-                              <span class="centrize full-width">
-                                <span class="vertical-center">
-                                  <span class="ion ion-ios-plus-empty"></span>
+                        <div className="image">
+                          <a href="#IderSpace" className="has-popup">
+                            <img src={process.env.PUBLIC_URL+'/images/IderSpace.jpg'} alt="IderSpace" />
+                            <span className="info">
+                              <span className="centrize full-width">
+                                <span className="vertical-center">
+                                  <span className="ion ion-ios-plus-empty"/>
                                 </span>
                               </span>
                             </span>
                           </a>
                         </div>
-                        <div class="desc">
-                          <div class="category">IderSpace</div>
+                        <div className="desc">
+                          <div className="category">IderSpace</div>
                         </div>
                       </div>
                     }
@@ -218,10 +218,10 @@ export default class index extends Component {
                       <div className="popup-box mfp-fade">
                         <div className="content">
                           <div className="image">
-                            <img src="images/IderSpace.jpg" alt="img" />
+                            <img src={process.env.PUBLIC_URL+'/images/IderSpace.jpg'} alt="img" />
                           </div>
                           <div className="desc">
-                            <div className="category"></div>
+                            <div className="category"/>
                             <h4>IderSpace</h4>
                             <p
                               style={{
@@ -267,25 +267,25 @@ export default class index extends Component {
                     </div>
                   </Popup>
                 </div>
-                <div class="box-item">
+                <div className="box-item">
                   <Popup
                     contentStyle={{ width: "600px" }}
                     trigger={
                       <div>
-                        <div class="image">
-                          <a href="#DocTwin" class="has-popup">
-                            <img src="images/doctwin.jpg" alt="" />
-                            <span class="info">
-                              <span class="centrize full-width">
-                                <span class="vertical-center">
-                                  <span class="ion ion-ios-plus-empty"></span>
+                        <div className="image">
+                          <a href="#DocTwin" className="has-popup">
+                            <img src={process.env.PUBLIC_URL+'/images/doctwin.jpg'} alt="" />
+                            <span className="info">
+                              <span className="centrize full-width">
+                                <span className="vertical-center">
+                                  <span className="ion ion-ios-plus-empty"/>
                                 </span>
                               </span>
                             </span>
                           </a>
                         </div>
-                        <div class="desc">
-                          <div class="category">DocTwin</div>
+                        <div className="desc">
+                          <div className="category">DocTwin</div>
                         </div>
                       </div>
                     }
@@ -296,10 +296,10 @@ export default class index extends Component {
                       <div className="popup-box mfp-fade">
                         <div className="content">
                           <div className="image">
-                            <img src="images/doctwin.jpg" alt="img" />
+                            <img src={process.env.PUBLIC_URL+'/images/doctwin.jpg'} alt="img" />
                           </div>
                           <div className="desc">
-                            <div className="category"></div>
+                            <div className="category"/>
                             <h4>DocTwin</h4>
                             <p
                               style={{
@@ -343,25 +343,25 @@ export default class index extends Component {
                     </div>
                   </Popup>
                 </div>
-                <div class="box-item">
+                <div className="box-item">
                   <Popup
                     contentStyle={{ width: "600px" }}
                     trigger={
                       <div>
-                        <div class="image">
-                          <a href="#formalab" class="has-popup">
-                            <img src="images/youth.jpg" alt="" />
-                            <span class="info">
-                              <span class="centrize full-width">
-                                <span class="vertical-center">
-                                  <span class="ion ion-ios-plus-empty"></span>
+                        <div className="image">
+                          <a href="#formalab" className="has-popup">
+                            <img src={process.env.PUBLIC_URL+'/images/youth.jpg'} alt="" />
+                            <span className="info">
+                              <span className="centrize full-width">
+                                <span className="vertical-center">
+                                  <span className="ion ion-ios-plus-empty"/>
                                 </span>
                               </span>
                             </span>
                           </a>
                         </div>
-                        <div class="desc">
-                          <div class="category">Youth Township</div>
+                        <div className="desc">
+                          <div className="category">Youth Township</div>
                         </div>
                       </div>
                     }
@@ -372,10 +372,10 @@ export default class index extends Component {
                       <div className="popup-box mfp-fade">
                         <div className="content">
                           <div className="image">
-                            <img src="images/youth.jpg" alt="img" />
+                            <img src={process.env.PUBLIC_URL+'/images/youth.jpg'} alt="Youth" />
                           </div>
                           <div className="desc">
-                            <div className="category"></div>
+                            <div className="category"/>
                             <h4>Youth Township</h4>
                             <p
                               style={{
@@ -408,28 +408,28 @@ export default class index extends Component {
                     </div>
                   </Popup>
                 </div>
-                <div class="box-item">
+                <div className="box-item">
                   <Popup
                     contentStyle={{ width: "600px" }}
                     trigger={
                       <div>
-                        <div class="image">
-                          <a href="#formalab" class="has-popup">
+                        <div className="image">
+                          <a href="#formalab" className="has-popup">
                             <img
-                              src="images/esprit.jpg"
+                              src={process.env.PUBLIC_URL+'/images/esprit.jpg'}
                               alt="esprit entre'aid"
                             />
-                            <span class="info">
-                              <span class="centrize full-width">
-                                <span class="vertical-center">
-                                  <span class="ion ion-ios-plus-empty"></span>
+                            <span className="info">
+                              <span className="centrize full-width">
+                                <span className="vertical-center">
+                                  <span className="ion ion-ios-plus-empty"/>
                                 </span>
                               </span>
                             </span>
                           </a>
                         </div>
-                        <div class="desc">
-                          <div class="category">Esprit entre'aid</div>
+                        <div className="desc">
+                          <div className="category">Esprit entre'aid</div>
                         </div>
                       </div>
                     }
@@ -440,10 +440,10 @@ export default class index extends Component {
                       <div className="popup-box mfp-fade">
                         <div className="content">
                           <div className="image">
-                            <img src="images/esprit.jpg" alt="img" />
+                            <img src={process.env.PUBLIC_URL+'/images/esprit.jpg'} alt="img" />
                           </div>
                           <div className="desc">
-                            <div className="category"></div>
+                            <div className="category"/>
                             <h4>Esprit entre'aid</h4>
                             <p
                               style={{

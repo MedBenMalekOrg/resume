@@ -1,6 +1,6 @@
 {
-  "homepage": "http://medbenmalek.me/resume",
-  "name": "resume",
+  "homepage": "https://medbenmalek.github.io/resume/",
+  "name": "medbenmalek-resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

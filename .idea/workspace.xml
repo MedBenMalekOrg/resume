@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="951227a1-8298-40c1-a741-39712b964be5" name="Default Changelist" comment="update react" />
+    <list default="true" id="951227a1-8298-40c1-a741-39712b964be5" name="Default Changelist" comment="update packages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/portfolio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/portfolio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/resume/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/resume/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,8 +72,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="C:\Users\Med\WebstormProjects\untitled\node_modules\eslint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -88,7 +97,7 @@
       <updated>1568389037123</updated>
       <workItem from="1568389039287" duration="1558000" />
       <workItem from="1568390918500" duration="3000" />
-      <workItem from="1634149000674" duration="687000" />
+      <workItem from="1634149000674" duration="3117000" />
     </task>
     <task id="LOCAL-00001" summary="update react">
       <created>1634149974602</created>
@@ -97,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634149974602</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update packages">
+      <created>1634150164340</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634150164340</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -145,7 +161,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update react" />
-    <option name="LAST_COMMIT_MESSAGE" value="update react" />
+    <MESSAGE value="update packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="update packages" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/yarn.lock" />

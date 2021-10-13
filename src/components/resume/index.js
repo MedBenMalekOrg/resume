@@ -75,7 +75,7 @@ export default class index extends Component {
               <div className="title_inner">About Me</div>
             </div>
             <div className="image">
-              <img src="/images/med.jpg" alt="med ben malek" />
+              <img src={process.env.PUBLIC_URL+'/images/med.jpg'} alt="med ben malek" />
             </div>
             <div className="desc">
               <p>
